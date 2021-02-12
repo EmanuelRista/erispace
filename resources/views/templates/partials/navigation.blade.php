@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar bg-grey">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -22,7 +22,7 @@
           <div class="form-group">
             <input type="text" name="query" class="form-control" placeholder="Find people">
           </div>
-          <button type="submit" class="btn btn-default">Search</button>
+          <button type="submit" class="btn btn-eris">Search</button>
         </form>
       @endif
         <ul class="nav navbar-nav navbar-right">

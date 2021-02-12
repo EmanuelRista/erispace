@@ -26,7 +26,7 @@
     @endif
       </div>
       <div class="form-group">
-        <button class="btn btn-default" type="submit">Sign up</button>
+        <button class="btn btn-eris" type="submit">Sign up</button>
       </div>
       <input type="hidden" name="_token" value="{{ Session::token() }}">
     </form>

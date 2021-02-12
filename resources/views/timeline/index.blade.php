@@ -10,7 +10,7 @@
                         <span class="help-block">{{ $errors->first('status') }}</span>
                     @endif
                 </div>
-                <button type="submit" class="btn btn-default">Update status</button>
+                <button type="submit" class="btn btn-eris">Update status</button>
                 <input type="hidden" name="_token" value="{{ Session::token() }}">
             </form>
             <hr>
@@ -64,7 +64,7 @@
                                         <span class="help-block">{{ $errors->first("reply-{$status->id}") }}</span>
                                     @endif
                                 </div>
-                                <input type="submit" value="Reply" class="btn btn-default btn-sm">
+                                <input type="submit" value="Reply" class="btn btn-eris btn-sm">
                                 <input type="hidden" name="_token" value="{{ Session::token() }}">
                             </form>
                         </div>

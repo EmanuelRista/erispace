@@ -1,0 +1,41 @@
+body {
+  background-color: #282828;
+  color: white;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  color: #8db310;
+}
+
+.bg-grey {
+  background-color: #151415;
+}
+
+.btn-eris {
+  background-color: #8db310;
+  color: #151415;
+}
+.btn-eris:hover {
+  background-color: #151415;
+  color: #8db310;
+  border: 1px solid #8db310;
+}
+
+.icon-bar {
+  background-color: #8db310;
+}
+
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
+  color: #8db310;
+} 
+
+.alert-info {
+  color: #151415;
+  background-color: #8db310;
+  border-color: #8db310;
+}

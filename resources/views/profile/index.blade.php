@@ -52,7 +52,7 @@
                                             <span class="help-block">{{ $errors->first("reply-{$status->id}") }}</span>
                                         @endif
                                     </div>
-                                    <input type="submit" value="Reply" class="btn btn-default btn-sm">
+                                    <input type="submit" value="Reply" class="btn btn-eris btn-sm">
                                     <input type="hidden" name="_token" value="{{ Session::token() }}">
                                 </form>
                             @endif
@@ -66,11 +66,17 @@
             @if (Auth::user()->hasFriendRequestPending($user))
                 <p>Waiting for {{ $user->getNameOrUsername() }} to accept your request.</p>
             @elseif (Auth::user()->hasFriendRequestReceived($user))
-                <a href="{{ route('friend.accept', ['username' => $user->username]) }}" class="btn btn-primary">Accept friend request</a>
+                <a href="{{ route('friend.accept', ['username' => $user->username]) }}" class="btn btn-eris">Accept friend request</a>
             @elseif (Auth::user()->isFriendsWith($user))
                 <p>You and {{ $user->getNameOrUsername() }} are friends.</p>
+
+                <form action="{{ route('friend.delete', ['username' => $user->username]) }}" method="post">
+                    <input type="submit" value="Delete friend" class="btn btn-eris">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                </form>
+
             @elseif (Auth::user()->id !== $user->id)
-                <a href="{{ route('friend.add', ['username' => $user->username]) }}" class="btn btn-primary">Add as friend</a>
+                <a href="{{ route('friend.add', ['username' => $user->username]) }}" class="btn btn-eris">Add as friend</a>
             @endif
 
             <h4>{{ $user->getFirstNameOrUsername() }}'s friends.</h4>
